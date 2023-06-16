@@ -42,3 +42,5 @@ def save_file():
          for contact in phone_book:
              file.write(f"{contact['id']}:{contact['name']}:{contact['phone']}:{contact['comment']}\n")
 
+def delete_contact(index: int):
+    phone_book.pop(index-1)

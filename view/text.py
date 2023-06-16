@@ -20,6 +20,8 @@ search_word = 'Введите искомый элемент '
 input_index = 'Введите индекс изменяемого контакта '
 input_change_contact = 'Введите данные изменяемого контакта или Enter чтоб оставить без изменений '
 save_successful = 'Телефонная книга успешна записана'
+delete_index = 'Введите индекс удаляемого элемента '
+delete_contact = 'Контакт удален'
 
 
 def contact_saved(name: str):
@@ -28,3 +30,6 @@ def contact_saved(name: str):
 
 def contact_changed(name: str):
     return f'Контакт {name} успешно изменен'
+
+def contact_delete(name: str):
+    return f'Контакт {name} успешно удален'
