@@ -19,6 +19,7 @@ search_word = 'Введите искомый элемент '
 # input_change_contact = 'Введите данные нового контакта'
 input_index = 'Введите индекс изменяемого контакта '
 input_change_contact = 'Введите данные изменяемого контакта или Enter чтоб оставить без изменений '
+save_successful = 'Телефонная книга успешна записана'
 
 
 def contact_saved(name: str):
