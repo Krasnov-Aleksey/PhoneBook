@@ -16,9 +16,9 @@ def start():
             case 3:
                 show_contacts(model.phone_book)
             case 4:
-                new = input_contacts(text.input_new_contact)
-                model.add_contact(new)
-                print_message(text.contact_saved(new.get('name')))
+                name, phone, comment = input_contacts(text.input_new_contact)
+                model.add_contact(name, phone, comment)
+                print_message(text.contact_saved(name))
             case 5:
                 word = input_return(text.search_word)
                 result = model.search(word)
@@ -30,8 +30,8 @@ def start():
                 index = input_return(text.input_index)
                 new = input_contacts(text.input_change_contact)
                 model.change(int(index), new)
-                old_name = model.phone_book[int(index)-1].get('name')
-                print_message(text.contact_changed(new.get('name') if new.get('name') else old_name))
+                # old_name = model.phone_book[int(index)-1].get('name')
+                print_message(text.contact_changed()) #new.get('name') if new.get('name') else old_name))
             case 7:
                 word = input_return(text.search_word)
                 result = model.search(word)

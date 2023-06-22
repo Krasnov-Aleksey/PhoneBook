@@ -1,4 +1,5 @@
 from .text import *
+from contact import Contact
 
 
 def menu() -> int:
@@ -17,26 +18,26 @@ def print_message(message: str):
     print('='*length+'\n')
 
 
-def show_contacts(book: list[dict[str, str]]):
+def show_contacts(book):
     if book:
         print('\n'+'='*67)
         for contact in book:
-            uid = contact.get('id')
-            name = contact.get('name')
-            phone = contact.get('phone')
-            comment = contact.get('comment')
+            uid = contact.uid
+            name = contact.name
+            phone = contact.phone
+            comment = contact.comment
             print(f'{uid:>3}. {name:<20} {phone:<20} {comment:<20}')
         print('='*67+'\n')
     else:
         print(boor_error)
 
 
-def input_contacts(message: str) -> dict[str, str]:
+def input_contacts(message: str):
     print(message)
     name = input(new_contact[0])
     phone = input(new_contact[1])
     comment = input(new_contact[2])
-    return {'name': name, 'phone': phone, 'comment': comment}
+    return name, phone, comment
 
 
 def input_return(message: str) -> str:
