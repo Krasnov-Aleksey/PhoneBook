@@ -1,5 +1,4 @@
 from .text import *
-from contact import Contact
 
 
 def menu() -> int:

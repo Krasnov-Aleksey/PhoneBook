@@ -30,8 +30,7 @@ def start():
                 index = input_return(text.input_index)
                 new = input_contacts(text.input_change_contact)
                 model.change(int(index), new)
-                # old_name = model.phone_book[int(index)-1].get('name')
-                print_message(text.contact_changed()) #new.get('name') if new.get('name') else old_name))
+                print_message(text.contact_changed())
             case 7:
                 word = input_return(text.search_word)
                 result = model.search(word)
